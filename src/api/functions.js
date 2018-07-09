@@ -65,7 +65,7 @@ export function changeUsername(db, req, res) {
 		}
 		var addNameText = 'UPDATE user SET username = ? WHERE user_id = ?';
 		var newUsername = req.body.queryResult.parameters.username;
-		var userParams = [ID, newUsername];
+		var userParams = [newUsername, ID];
 		db.query(addNameText, userParams, (err, rows) => {
 			if (err) {
 				console.log(err);
