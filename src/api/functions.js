@@ -39,7 +39,7 @@ export function addUser(db, req, res) {
 			console.log(err);
 		}
 		if (rows.length) {
-			//console.log('User already exists');
+			console.log(' ');
 		}
 		else {
 			var addUserText = 'INSERT INTO user(user_id) VALUES(?);';
